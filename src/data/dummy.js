@@ -1,27 +1,26 @@
-import React from 'react';
-import { AiOutlineCalendar, AiOutlineShoppingCart, AiOutlineAreaChart, AiOutlineBarChart, AiOutlineStock } from 'react-icons/ai';
-import { FiShoppingBag, FiEdit, FiPieChart, FiBarChart, FiCreditCard, FiStar, FiShoppingCart } from 'react-icons/fi';
-import { BsKanban, BsBarChart, BsBoxSeam, BsCurrencyDollar, BsShield, BsChatLeft } from 'react-icons/bs';
-import { BiColorFill } from 'react-icons/bi';
-import { IoMdContacts } from 'react-icons/io';
-import { RiContactsLine, RiStockLine } from 'react-icons/ri';
-import { MdOutlineSupervisorAccount } from 'react-icons/md';
-import { HiOutlineRefresh } from 'react-icons/hi';
-import { TiTick } from 'react-icons/ti';
-import { GiLouvrePyramid } from 'react-icons/gi';
-import { GrLocation } from 'react-icons/gr';
-import avatar from './avatar.jpg';
-import avatar2 from './avatar2.jpg';
-import avatar3 from './avatar3.png';
-import avatar4 from './avatar4.jpg';
-import product1 from './product1.jpg';
-import product2 from './product2.jpg';
-import product3 from './product3.jpg';
-import product4 from './product4.jpg';
-import product5 from './product5.jpg';
-import product6 from './product6.jpg';
-import product7 from './product7.jpg';
-import product8 from './product8.jpg';
+import React from 'react'
+import { AiOutlineCalendar, AiOutlineShoppingCart, AiOutlineAreaChart, AiOutlineBarChart, AiOutlineStock } from 'react-icons/ai'
+import { FiShoppingBag, FiEdit, FiPieChart, FiBarChart, FiCreditCard, FiStar, FiShoppingCart } from 'react-icons/fi'
+import { BsKanban, BsBarChart, BsBoxSeam, BsCurrencyDollar, BsShield, BsChatLeft } from 'react-icons/bs'
+import { BiColorFill } from 'react-icons/bi'
+import { IoMdContacts } from 'react-icons/io'
+import { RiContactsLine, RiStockLine } from 'react-icons/ri'
+import { MdOutlineSupervisorAccount } from 'react-icons/md'
+import { HiOutlineRefresh } from 'react-icons/hi'
+import { TiTick } from 'react-icons/ti'
+import { GiLouvrePyramid } from 'react-icons/gi'
+import { GrLocation } from 'react-icons/gr'
+import avatar from './avatar.jpg'
+import avatar2 from './avatar2.jpg'
+import avatar3 from './avatar3.png'
+import avatar4 from './avatar4.jpg'
+import product1 from './product1.jpg'
+import product3 from './product3.jpg'
+import product4 from './product4.jpg'
+import product5 from './product5.jpg'
+import product6 from './product6.jpg'
+import product7 from './product7.jpg'
+import product2 from './product8.jpg'
 
 export const gridOrderImage = (props) => (
   <div>
@@ -31,7 +30,7 @@ export const gridOrderImage = (props) => (
       alt="order-item"
     />
   </div>
-);
+)
 
 export const gridOrderStatus = (props) => (
   <button
@@ -41,26 +40,35 @@ export const gridOrderStatus = (props) => (
   >
     {props.Status}
   </button>
-);
+)
 
 export const kanbanGrid = [
-  { headerText: 'To Do',
+  {
+    headerText: 'To Do',
     keyField: 'Open',
-    allowToggle: true },
+    allowToggle: true,
+  },
 
-  { headerText: 'In Progress',
+  {
+    headerText: 'In Progress',
     keyField: 'InProgress',
-    allowToggle: true },
+    allowToggle: true,
+  },
 
-  { headerText: 'Testing',
+  {
+    headerText: 'Testing',
     keyField: 'Testing',
     allowToggle: true,
-    isExpanded: false },
+    isExpanded: false,
+  },
 
-  { headerText: 'Done',
+  {
+    headerText: 'Done',
     keyField: 'Close',
-    allowToggle: true },
-];
+    allowToggle: true,
+  },
+]
+
 const gridEmployeeProfile = (props) => (
   <div className="flex items-center gap-2">
     <img
@@ -70,14 +78,15 @@ const gridEmployeeProfile = (props) => (
     />
     <p>{props.Name}</p>
   </div>
-);
+)
 
 const gridEmployeeCountry = (props) => (
   <div className="flex items-center justify-center gap-2">
     <GrLocation />
     <span>{props.Country}</span>
   </div>
-);
+)
+
 export const EditorData = () => (
   <div>
     <h3>
@@ -119,7 +128,8 @@ export const EditorData = () => (
       We recommend going through this JavaScript overview to check your knowledge level. It will take you between 30 minutes and an hour but you will feel more confident learning React.
     </h3>
   </div>
-);
+)
+
 const customerGridImage = (props) => (
   <div className="image flex gap-4">
     <img
@@ -132,14 +142,15 @@ const customerGridImage = (props) => (
       <p>{props.CustomerEmail}</p>
     </div>
   </div>
-);
+)
 
 const customerGridStatus = (props) => (
   <div className="flex gap-2 justify-center items-center text-gray-700 capitalize">
     <p style={{ background: props.StatusBg }} className="rounded-full h-3 w-3" />
     <p>{props.Status}</p>
   </div>
-);
+)
+
 export const areaPrimaryXAxis = {
   valueType: 'DateTime',
   labelFormat: 'y',
@@ -147,7 +158,7 @@ export const areaPrimaryXAxis = {
   intervalType: 'Years',
   edgeLabelPlacement: 'Shift',
   labelStyle: { color: 'gray' },
-};
+}
 
 export const areaPrimaryYAxis = {
   labelFormat: '{value}%',
@@ -157,19 +168,20 @@ export const areaPrimaryYAxis = {
   majorTickLines: { width: 0 },
   minorTickLines: { width: 0 },
   labelStyle: { color: 'gray' },
+}
 
-};
 export const barPrimaryXAxis = {
   valueType: 'Category',
   interval: 1,
   majorGridLines: { width: 0 },
-};
+}
 export const barPrimaryYAxis = {
   majorGridLines: { width: 0 },
   majorTickLines: { width: 0 },
   lineStyle: { width: 0 },
   labelStyle: { color: 'transparent' },
-};
+}
+
 const areaChartData = [
   [
     { x: new Date(2002, 0, 1), y: 2.2 },
@@ -207,7 +219,7 @@ const areaChartData = [
     { x: new Date(2010, 0, 1), y: 1.1 },
     { x: new Date(2011, 0, 1), y: 2.3 },
   ],
-];
+]
 
 export const areaCustomSeries = [
   {
@@ -238,7 +250,7 @@ export const areaCustomSeries = [
     type: 'SplineArea',
     width: '2',
   },
-];
+]
 
 export const barChartData = [
   [
@@ -256,7 +268,7 @@ export const barChartData = [
     { x: 'GBR', y: 17 },
     { x: 'CHN', y: 26 },
   ],
-];
+]
 
 export const barCustomSeries = [
   {
@@ -301,7 +313,8 @@ export const barCustomSeries = [
       },
     },
   },
-];
+]
+
 export const colorMappingData = [
   [
     { x: 'Jan', y: 6.96 },
@@ -320,31 +333,37 @@ export const colorMappingData = [
   ['#FFFF99'],
   ['#FFA500'],
   ['#FF4040'],
-];
+]
 
 export const rangeColorMapping = [
-  { label: '1°C to 10°C',
+  {
+    label: '1°C to 10°C',
     start: '1',
     end: '10',
-    colors: colorMappingData[1] },
+    colors: colorMappingData[1],
+  },
 
-  { label: '11°C to 20°C',
+  {
+    label: '11°C to 20°C',
     start: '11',
     end: '20',
-    colors: colorMappingData[2] },
+    colors: colorMappingData[2],
+  },
 
-  { label: '21°C to 30°C',
+  {
+    label: '21°C to 30°C',
     start: '21',
     end: '30',
-    colors: colorMappingData[3] },
+    colors: colorMappingData[3],
+  },
 
-];
+]
 
 export const ColorMappingPrimaryXAxis = {
   valueType: 'Category',
   majorGridLines: { width: 0 },
   title: 'Months',
-};
+}
 
 export const ColorMappingPrimaryYAxis = {
   lineStyle: { width: 0 },
@@ -352,7 +371,7 @@ export const ColorMappingPrimaryYAxis = {
   minorTickLines: { width: 0 },
   labelFormat: '{value}°C',
   title: 'Temperature',
-};
+}
 
 export const FinancialPrimaryXAxis = {
   valueType: 'DateTime',
@@ -360,7 +379,7 @@ export const FinancialPrimaryXAxis = {
   maximum: new Date('2017, 9, 30'),
   crosshairTooltip: { enable: true },
   majorGridLines: { width: 0 },
-};
+}
 
 export const FinancialPrimaryYAxis = {
   title: 'Price',
@@ -369,7 +388,7 @@ export const FinancialPrimaryYAxis = {
   interval: 20,
   lineStyle: { width: 0 },
   majorTickLines: { width: 0 },
-};
+}
 
 export const LinePrimaryXAxis = {
   valueType: 'DateTime',
@@ -378,7 +397,7 @@ export const LinePrimaryXAxis = {
   edgeLabelPlacement: 'Shift',
   majorGridLines: { width: 0 },
   background: 'white',
-};
+}
 
 export const LinePrimaryYAxis = {
   labelFormat: '{value}%',
@@ -389,85 +408,109 @@ export const LinePrimaryYAxis = {
   lineStyle: { width: 0 },
   majorTickLines: { width: 0 },
   minorTickLines: { width: 0 },
-};
+}
 
 export const customersGrid = [
   { type: 'checkbox', width: '50' },
-  { headerText: 'Name',
+  {
+    headerText: 'Name',
     width: '150',
     template: customerGridImage,
-    textAlign: 'Center' },
-  { field: 'ProjectName',
+    textAlign: 'Center',
+  },
+  {
+    field: 'ProjectName',
     headerText: 'Project Name',
     width: '150',
-    textAlign: 'Center' },
-  { field: 'Status',
+    textAlign: 'Center',
+  },
+  {
+    field: 'Status',
     headerText: 'Status',
     width: '130',
     format: 'yMd',
     textAlign: 'Center',
-    template: customerGridStatus },
+    template: customerGridStatus,
+  },
   {
     field: 'Weeks',
     headerText: 'Weeks',
     width: '100',
     format: 'C2',
-    textAlign: 'Center' },
-  { field: 'Budget',
+    textAlign: 'Center',
+  },
+  {
+    field: 'Budget',
     headerText: 'Budget',
     width: '100',
     format: 'yMd',
-    textAlign: 'Center' },
+    textAlign: 'Center',
+  },
 
-  { field: 'Location',
+  {
+    field: 'Location',
     headerText: 'Location',
     width: '150',
-    textAlign: 'Center' },
+    textAlign: 'Center',
+  },
 
-  { field: 'CustomerID',
+  {
+    field: 'CustomerID',
     headerText: 'Customer ID',
     width: '120',
     textAlign: 'Center',
     isPrimaryKey: true,
   },
 
-];
+]
 
 export const employeesGrid = [
-  { headerText: 'Employee',
+  {
+    headerText: 'Employee',
     width: '150',
     template: gridEmployeeProfile,
-    textAlign: 'Center' },
-  { field: 'Name',
+    textAlign: 'Center',
+  },
+  {
+    field: 'Name',
     headerText: '',
     width: '0',
     textAlign: 'Center',
   },
-  { field: 'Title',
+  {
+    field: 'Title',
     headerText: 'Designation',
     width: '170',
     textAlign: 'Center',
   },
-  { headerText: 'Country',
+  {
+    headerText: 'Country',
     width: '120',
     textAlign: 'Center',
-    template: gridEmployeeCountry },
+    template: gridEmployeeCountry,
+  },
 
-  { field: 'HireDate',
+  {
+    field: 'HireDate',
     headerText: 'Hire Date',
     width: '135',
     format: 'yMd',
-    textAlign: 'Center' },
+    textAlign: 'Center',
+  },
 
-  { field: 'ReportsTo',
+  {
+    field: 'ReportsTo',
     headerText: 'Reports To',
     width: '120',
-    textAlign: 'Center' },
-  { field: 'EmployeeID',
+    textAlign: 'Center',
+  },
+  {
+    field: 'EmployeeID',
     headerText: 'Employee ID',
     width: '125',
-    textAlign: 'Center' },
-];
+    textAlign: 'Center',
+  },
+]
 
 export const links = [
   {
@@ -556,7 +599,7 @@ export const links = [
       },
     ],
   },
-];
+]
 
 export const cartData = [
   {
@@ -580,7 +623,7 @@ export const cartData = [
     category: 'Food Item',
     price: '$190',
   },
-];
+]
 
 export const chatData = [
   {
@@ -611,7 +654,7 @@ export const chatData = [
     desc: 'Assign her new tasks',
     time: '1:12 AM',
   },
-];
+]
 
 export const earningData = [
   {
@@ -651,7 +694,7 @@ export const earningData = [
     iconBg: 'rgb(235, 250, 242)',
     pcColor: 'red-600',
   },
-];
+]
 
 export const recentTransactions = [
   {
@@ -702,7 +745,7 @@ export const recentTransactions = [
     iconBg: '#E5FAFB',
     pcColor: 'red-600',
   },
-];
+]
 
 export const weeklyStats = [
   {
@@ -729,7 +772,7 @@ export const weeklyStats = [
     iconBg: '#00C292',
     pcColor: 'green-600',
   },
-];
+]
 
 export const productsPerformance = [
   {
@@ -768,7 +811,7 @@ export const productsPerformance = [
     itemSold: '23%',
     earningAmount: '$123,000',
   },
-];
+]
 
 export const medicalproBranding = {
   data: [
@@ -817,7 +860,7 @@ export const medicalproBranding = {
         avatar,
     },
   ],
-};
+}
 
 export const themeColors = [
   {
@@ -844,7 +887,7 @@ export const themeColors = [
     color: '#FB9678',
     name: 'orange-theme',
   },
-];
+]
 
 export const userProfileData = [
   {
@@ -868,7 +911,7 @@ export const userProfileData = [
     iconColor: 'rgb(255, 244, 229)',
     iconBg: 'rgb(254, 201, 15)',
   },
-];
+]
 
 export const ordersGrid = [
   {
@@ -884,7 +927,8 @@ export const ordersGrid = [
     editType: 'dropdownedit',
     textAlign: 'Center',
   },
-  { field: 'CustomerName',
+  {
+    field: 'CustomerName',
     headerText: 'Customer Name',
     width: '150',
     textAlign: 'Center',
@@ -917,7 +961,7 @@ export const ordersGrid = [
     width: '150',
     textAlign: 'Center',
   },
-];
+]
 
 export const customersData = [
   {
@@ -1479,7 +1523,7 @@ export const customersData = [
     Location: 'USA',
   },
 
-];
+]
 
 export const employeesData = [
   {
@@ -1490,7 +1534,7 @@ export const employeesData = [
     Country: 'USA',
     ReportsTo: 'Carson',
     EmployeeImage:
-    avatar3,
+      avatar3,
   },
   {
     EmployeeID: 2,
@@ -1560,7 +1604,7 @@ export const employeesData = [
     Country: 'USA',
     ReportsTo: 'Carson',
     EmployeeImage:
-    avatar2,
+      avatar2,
 
   },
   {
@@ -1631,7 +1675,7 @@ export const employeesData = [
     Country: 'USA',
     ReportsTo: 'Carson',
     EmployeeImage:
-    avatar,
+      avatar,
   },
   {
     EmployeeID: 2,
@@ -1701,7 +1745,7 @@ export const employeesData = [
     Country: 'USA',
     ReportsTo: 'Carson',
     EmployeeImage:
-    avatar2,
+      avatar2,
 
   },
   {
@@ -1772,7 +1816,7 @@ export const employeesData = [
     Country: 'USA',
     ReportsTo: 'Carson',
     EmployeeImage:
-    avatar2,
+      avatar2,
 
   },
   {
@@ -1843,7 +1887,7 @@ export const employeesData = [
     Country: 'USA',
     ReportsTo: 'Carson',
     EmployeeImage:
-    avatar2,
+      avatar2,
 
   },
   {
@@ -1914,7 +1958,7 @@ export const employeesData = [
     Country: 'USA',
     ReportsTo: 'Carson',
     EmployeeImage:
-    avatar2,
+      avatar2,
 
   },
   {
@@ -1985,7 +2029,7 @@ export const employeesData = [
     Country: 'USA',
     ReportsTo: 'Carson',
     EmployeeImage:
-    avatar2,
+      avatar2,
 
   },
   {
@@ -2056,7 +2100,7 @@ export const employeesData = [
     Country: 'USA',
     ReportsTo: 'Carson',
     EmployeeImage:
-    avatar2,
+      avatar2,
 
   },
   {
@@ -2119,7 +2163,7 @@ export const employeesData = [
     EmployeeImage:
       avatar2,
   },
-];
+]
 
 export const ordersData = [
   {
@@ -2176,7 +2220,7 @@ export const ordersData = [
     Status: 'rejected',
     StatusBg: 'red',
     ProductImage:
-    product1,
+      product1,
   },
   {
     OrderID: 94757,
@@ -2231,7 +2275,7 @@ export const ordersData = [
     Status: 'canceled',
     StatusBg: '#FF5C8E',
     ProductImage:
-      'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*',
+      'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh0.250xw,0&resize=640:*',
   },
   {
     OrderID: 38489,
@@ -2264,7 +2308,7 @@ export const ordersData = [
     Status: 'canceled',
     StatusBg: '#FF5C8E',
     ProductImage:
-      'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*',
+      'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh0.250xw,0&resize=640:*',
   },
   {
     OrderID: 10248,
@@ -2375,7 +2419,7 @@ export const ordersData = [
     Status: 'canceled',
     StatusBg: '#FF5C8E',
     ProductImage:
-      'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*',
+      'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh0.250xw,0&resize=640:*',
   },
   {
     OrderID: 38489,
@@ -2408,7 +2452,7 @@ export const ordersData = [
     Status: 'canceled',
     StatusBg: '#FF5C8E',
     ProductImage:
-      'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*',
+      'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh0.250xw,0&resize=640:*',
   },
   {
     OrderID: 10248,
@@ -2519,7 +2563,7 @@ export const ordersData = [
     Status: 'canceled',
     StatusBg: '#FF5C8E',
     ProductImage:
-      'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*',
+      'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh0.250xw,0&resize=640:*',
   },
   {
     OrderID: 38489,
@@ -2552,7 +2596,7 @@ export const ordersData = [
     Status: 'canceled',
     StatusBg: '#FF5C8E',
     ProductImage:
-      'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*',
+      'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh0.250xw,0&resize=640:*',
   },
   {
     OrderID: 10248,
@@ -2663,7 +2707,7 @@ export const ordersData = [
     Status: 'canceled',
     StatusBg: '#FF5C8E',
     ProductImage:
-      'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*',
+      'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh0.250xw,0&resize=640:*',
   },
   {
     OrderID: 38489,
@@ -2696,7 +2740,7 @@ export const ordersData = [
     Status: 'canceled',
     StatusBg: '#FF5C8E',
     ProductImage:
-      'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*',
+      'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh0.250xw,0&resize=640:*',
   },
   {
     OrderID: 10248,
@@ -2807,7 +2851,7 @@ export const ordersData = [
     Status: 'canceled',
     StatusBg: '#FF5C8E',
     ProductImage:
-      'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*',
+      'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh0.250xw,0&resize=640:*',
   },
   {
     OrderID: 38489,
@@ -2840,9 +2884,9 @@ export const ordersData = [
     Status: 'canceled',
     StatusBg: '#FF5C8E',
     ProductImage:
-      'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*',
+      'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh0.250xw,0&resize=640:*',
   },
-];
+]
 
 export const scheduleData = [
   {
@@ -3037,7 +3081,7 @@ export const scheduleData = [
     EndTime: '2021-01-16T09:00:00.000Z',
     CategoryColor: '#7fa900',
   },
-];
+]
 
 export const lineChartData = [
   [
@@ -3068,7 +3112,7 @@ export const lineChartData = [
     { x: new Date(2010, 0, 1), y: 70 },
     { x: new Date(2011, 0, 1), y: 100 },
   ],
-];
+]
 export const dropdownData = [
   {
     Id: '1',
@@ -3081,7 +3125,8 @@ export const dropdownData = [
     Id: '3',
     Time: 'May 2021',
   },
-];
+]
+
 export const SparklineAreaData = [
   { x: 1, yval: 2 },
   { x: 2, yval: 6 },
@@ -3089,34 +3134,40 @@ export const SparklineAreaData = [
   { x: 4, yval: 5 },
   { x: 5, yval: 10 },
 
-];
+]
 
 export const lineCustomSeries = [
-  { dataSource: lineChartData[0],
+  {
+    dataSource: lineChartData[0],
     xName: 'x',
     yName: 'y',
     name: 'Germany',
     width: '2',
     marker: { visible: true, width: 10, height: 10 },
-    type: 'Line' },
+    type: 'Line',
+  },
 
-  { dataSource: lineChartData[1],
+  {
+    dataSource: lineChartData[1],
     xName: 'x',
     yName: 'y',
     name: 'England',
     width: '2',
     marker: { visible: true, width: 10, height: 10 },
-    type: 'Line' },
+    type: 'Line',
+  },
 
-  { dataSource: lineChartData[2],
+  {
+    dataSource: lineChartData[2],
     xName: 'x',
     yName: 'y',
     name: 'India',
     width: '2',
     marker: { visible: true, width: 10, height: 10 },
-    type: 'Line' },
+    type: 'Line',
+  },
 
-];
+]
 
 export const pieChartData = [
   { x: 'Labour', y: 18, text: '18%' },
@@ -3126,7 +3177,7 @@ export const pieChartData = [
   { x: 'Facilities', y: 18, text: '18%' },
   { x: 'Taxes', y: 14, text: '14%' },
   { x: 'Insurance', y: 16, text: '16%' },
-];
+]
 
 export const contextMenuItems = [
   'AutoFit',
@@ -3145,14 +3196,14 @@ export const contextMenuItems = [
   'PrevPage',
   'LastPage',
   'NextPage',
-];
+]
 
 export const ecomPieChartData = [
   { x: '2018', y: 18, text: '35%' },
   { x: '2019', y: 18, text: '15%' },
   { x: '2020', y: 18, text: '25%' },
   { x: '2021', y: 18, text: '25%' },
-];
+]
 
 export const stackedChartData = [
   [
@@ -3173,11 +3224,12 @@ export const stackedChartData = [
     { x: 'Jun', y: 159.9 },
     { x: 'July', y: 159.9 },
   ],
-];
+]
 
 export const stackedCustomSeries = [
 
-  { dataSource: stackedChartData[0],
+  {
+    dataSource: stackedChartData[0],
     xName: 'x',
     yName: 'y',
     name: 'Budget',
@@ -3186,7 +3238,8 @@ export const stackedCustomSeries = [
 
   },
 
-  { dataSource: stackedChartData[1],
+  {
+    dataSource: stackedChartData[1],
     xName: 'x',
     yName: 'y',
     name: 'Expense',
@@ -3195,7 +3248,7 @@ export const stackedCustomSeries = [
 
   },
 
-];
+]
 
 export const stackedPrimaryXAxis = {
   majorGridLines: { width: 0 },
@@ -3206,7 +3259,7 @@ export const stackedPrimaryXAxis = {
   lineStyle: { width: 0 },
   labelIntersectAction: 'Rotate45',
   valueType: 'Category',
-};
+}
 
 export const stackedPrimaryYAxis = {
   lineStyle: { width: 0 },
@@ -3218,7 +3271,7 @@ export const stackedPrimaryYAxis = {
   minorGridLines: { width: 1 },
   minorTickLines: { width: 0 },
   labelFormat: '{value}',
-};
+}
 
 export const kanbanData = [
   {
@@ -3571,7 +3624,7 @@ export const kanbanData = [
     Color: '#E64A19',
     ClassName: 'e-bug, e-release, e-nancy-davloio',
   },
-];
+]
 
 export const financialChartData = [
   {
@@ -5862,7 +5915,7 @@ export const financialChartData = [
     close: 158.67,
     volume: 27939544,
   },
-];
+]
 export const PyramidData = [
   { x: 'Sweet Treats', y: 120, text: '120 cal' },
   { x: 'Milk, Youghnut, Cheese', y: 435, text: '435 cal' },
@@ -5870,4 +5923,4 @@ export const PyramidData = [
   { x: 'Meat, Poultry, Fish', y: 475, text: '475 cal' },
   { x: 'Fruits', y: 520, text: '520 cal' },
   { x: 'Bread, Rice, Pasta', y: 930, text: '930 cal' },
-];
+]
