@@ -28,7 +28,7 @@ const App = () => {
             </TooltipComponent>
           </div>
           {activeMenu ? (
-            <div className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white"><Sidebar /></div>
+            <div className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white overflow-hidden" style={{ borderRadius: '16px 0 0 16px', height: '85%' }}><Sidebar /></div>
           ) : (
             <div className="w-0 dark:bg-secondary-dark-bg"><Sidebar /></div>
           )}
