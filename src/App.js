@@ -14,9 +14,9 @@ const App = () => {
   return (
     <div className={currentMode === 'Dark' ? 'dark' : ''}>
       <BrowserRouter>
-        <div className="flex relative dark:bg-main-dark-bg">
-          <div className="fixed right-4 bottom-4" style={{ zIndex: '1000' }}>
-            <TooltipComponent content="Settings" position="Top">
+        <div className="flex relative dark:bg-main-dark-bg h-full">
+          <div className="fixed right-3 bottom-3" style={{ zIndex: '1000' }}>
+            <TooltipComponent content="Configurações" position="Top">
               <button
                 type="button"
                 className="text-2xl p-2 hover:drop-shadow-xl hover:bg-light-gray text-white"
@@ -32,8 +32,8 @@ const App = () => {
           ) : (
             <div className="w-0 dark:bg-secondary-dark-bg"><Sidebar /></div>
           )}
-          <div className={`backdrop-blur-[20em] bg-dark-main min-h-screen max-w-full flex-1 ${activeMenu ? 'md:ml-72' : 'flex-2'}`}>
-            <div className="fixed md:static backdrop-blur-[20em] bg-dark-nav dark:bg-main-dark-bg navbar"><Navbar /></div>
+          <div className={`scrollbar backdrop-blur-[20em] bg-dark-main h-full max-w-full flex-1 overflow-scroll ${activeMenu ? 'md:ml-72' : 'flex-2'}`}>
+            <div className="sticky top-0 backdrop-blur-[20em] bg-dark-nav dark:bg-main-dark-bg navbar"><Navbar /></div>
             <div>
               {themeSettings && <ThemeSettings />}
               <Routes>
@@ -61,7 +61,7 @@ const App = () => {
             </div>
           </div>
           {activeSide ? (
-            <div className="dark:bg-secondary-dark-bg backdrop-blur-[20em]" style={{ borderRadius: '0 16px 16px 0', height: '85%' }}><Login /></div>
+            <div className="dark:bg-secondary-dark-bg backdrop-blur-[20em]" style={{ borderRadius: '0 16px 16px 0' }}><Login /></div>
           ) : (
             <div className="w-0 dark:bg-secondary-dark-bg"><Login /></div>
           )}

@@ -6,6 +6,10 @@ body{
     font-family: "Open Sans", sans-serif;
 }
 
+::-webkit-scrollbar {
+  width: .5px !important;
+}
+
 .App {
   height: 100vh;
   width: 100vw;
@@ -20,7 +24,6 @@ body{
   height: 85%;
   border-radius: 16px;
   display: flex;
-  overflow: hidden;
 }
 
 .input-container {

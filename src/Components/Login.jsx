@@ -8,7 +8,7 @@ const Login = () => {
   const { setActiveSide, activeSide, currentColor } = useStateContext()
 
   return (
-    <div className="mx-2 h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pb-10">
+    <div className="mx-2">
       {activeSide && (
         <>
           <div className="flex justify-between items-center">
@@ -23,9 +23,9 @@ const Login = () => {
               </button>
             </TooltipComponent>
           </div>
-          <div className="mt-12">
+          <div className="mt-12 sticky top-0">
             <div key="2">
-              <p className="text-white text-center m-3 mt-4 mb-10 uppercase">
+              <p className="text-white m-3 mt-4 mb-[3rem] uppercase">
                 Login
               </p>
               <form>
