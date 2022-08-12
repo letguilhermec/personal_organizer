@@ -16,11 +16,48 @@ body{
 }
 
 .board {
-  max-width: 90%;
+  max-width: 95%;
   height: 85%;
   border-radius: 16px;
   display: flex;
   overflow: hidden;
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.input-container label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1rem;
+  color: #fff;
+  pointer-events: none;
+  transition: all 0.25s ease-in-out;
+}
+
+.input-container input {
+  border: 0;
+  border-bottom: 1px solid;
+  background: transparent;
+  width: 100%;
+  padding: .5rem 0 .325rem 0;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.input-container input:focus {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid;
+}
+
+.input-container input:focus ~ label,
+.input-container input:valid ~ label {
+  top: -.875rem;
+  font-size: .875rem;
 }
 
 @tailwind base;

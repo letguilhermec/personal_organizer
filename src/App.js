@@ -2,14 +2,14 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { FiSettings } from 'react-icons/fi'
 import { TooltipComponent } from '@syncfusion/ej2-react-popups'
-import { Sidebar, Navbar, ThemeSettings } from './Components'
+import { Sidebar, Navbar, ThemeSettings, Login } from './Components'
 import { Ecommerce, Orders, Calendar, Customers, Employees, Stacked, Pyramid, Kanban, Area, Bar, Pie, Line, Financial, ColorPicker, ColorMapping, Editor } from './Pages'
 import { useStateContext } from './Contexts/ContextProvider'
 
 import './App.css'
 
 const App = () => {
-  const { activeMenu, themeSettings, setThemeSettings, currentColor, currentMode } = useStateContext()
+  const { activeMenu, activeSide, themeSettings, setThemeSettings, currentColor, currentMode } = useStateContext()
 
   return (
     <div className={currentMode === 'Dark' ? 'dark' : ''}>
@@ -19,7 +19,7 @@ const App = () => {
             <TooltipComponent content="Settings" position="Top">
               <button
                 type="button"
-                className="text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-white"
+                className="text-2xl p-2 hover:drop-shadow-xl hover:bg-light-gray text-white"
                 style={{ background: currentColor, borderRadius: '50%' }}
                 onClick={() => setThemeSettings(true)}
               >
@@ -32,8 +32,8 @@ const App = () => {
           ) : (
             <div className="w-0 dark:bg-secondary-dark-bg"><Sidebar /></div>
           )}
-          <div className={`backdrop-blur-[20em] min-h-screen w-full ${activeMenu ? 'md:ml-72' : 'flex-2'}`}>
-            <div className="fixed md:static backdrop-blur-[20em] dark:bg-main-dark-bg navbar w-full"><Navbar /></div>
+          <div className={`backdrop-blur-[20em] bg-dark-main min-h-screen max-w-full flex-1 ${activeMenu ? 'md:ml-72' : 'flex-2'}`}>
+            <div className="fixed md:static backdrop-blur-[20em] bg-dark-nav dark:bg-main-dark-bg navbar"><Navbar /></div>
             <div>
               {themeSettings && <ThemeSettings />}
               <Routes>
@@ -60,6 +60,11 @@ const App = () => {
               </Routes>
             </div>
           </div>
+          {activeSide ? (
+            <div className="dark:bg-secondary-dark-bg backdrop-blur-[20em]" style={{ borderRadius: '0 16px 16px 0', height: '85%' }}><Login /></div>
+          ) : (
+            <div className="w-0 dark:bg-secondary-dark-bg"><Login /></div>
+          )}
         </div>
       </BrowserRouter>
     </div>

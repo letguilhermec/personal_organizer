@@ -17,6 +17,7 @@ module.exports = {
         'light-gray': '#F7F7F7',
         'half-transparent': 'rgba(0, 0, 0, 0.5)',
         'dark-main': '#1D203E',
+        'dark-nav': '#2C2F48',
       },
       backdropFilter: {
         '20': '20em',
@@ -45,6 +46,9 @@ module.exports = {
       backgroundImage: {
         'hero-pattern':
           "url('/src/data/welcome-bg.svg')",
+        'crystal':
+          "url('/src/data/crystal.png')",
+        'pink-gradient': 'linear-gradient(190.33deg, rgba(196, 65, 244, 0.5) 4.76%, rgba(0, 218, 234, 0.5) 96.63%)',
       },
     },
   },

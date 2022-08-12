@@ -7,10 +7,12 @@ const initialState = {
   cart: false,
   userProfile: false,
   notification: false,
+  login: false,
 }
 
 export const ContextProvider = ({ children }) => {
   const [activeMenu, setActiveMenu] = useState(true)
+  const [activeSide, setActiveSide] = useState(true)
   const [isClicked, setIsClicked] = useState(initialState)
   const [screenSize, setScreenSize] = useState(undefined)
   const [currentColor, setCurrentColor] = useState('#03C9D7')
@@ -36,6 +38,8 @@ export const ContextProvider = ({ children }) => {
       value={{
         activeMenu,
         setActiveMenu,
+        activeSide,
+        setActiveSide,
         isClicked,
         setIsClicked,
         handleClick,

@@ -3,6 +3,7 @@ import { Link, NavLink } from 'react-router-dom'
 import { SiShopware } from 'react-icons/si'
 import { MdOutlineCancel } from 'react-icons/md'
 import { TooltipComponent } from '@syncfusion/ej2-react-popups'
+import { Cart, Chat, Notification, UserProfile, Login } from '.'
 import { links } from '../data/dummy'
 import { useStateContext } from '../Contexts/ContextProvider'
 
