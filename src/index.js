@@ -7,11 +7,7 @@ import App from './App'
 
 ReactDOM.render(
   <ContextProvider>
-    <div className="App">
-      <div className="board">
-        <App />
-      </div>
-    </div>
+    <App />
   </ContextProvider>,
   document.getElementById('root')
 )
