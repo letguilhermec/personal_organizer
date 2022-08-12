@@ -87,10 +87,10 @@ const Navbar = () => {
               src={avatar}
             />
             <p>
-              <span className="text-gray-400 text-14">Hi, </span> {' '}
-              <span className="text-gray-400 font-bold ml-1 text-14">Michael</span>
+              <span className="text-white text-14">Hi, </span> {' '}
+              <span className="text-white font-bold ml-1 text-14">Michael</span>
             </p>
-            <MdKeyboardArrowDown className="text-gray-400 text-14" />
+            <MdKeyboardArrowDown className="text-white text-14" />
           </div>
         </TooltipComponent>
         {isClicked.cart && <Cart />}
